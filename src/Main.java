@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
+import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -11,9 +12,18 @@ public class Main {
         int alto = screenSize.height;
 
         //Realiza aquí el bucle para abrir las ventanas que quieras (recomiendo for)
+        Scanner sc = new Scanner(System.in);
         int objetivo = new Random().nextInt(101);
         int j = 0;
-        System.out.println("Objetivo: " + objetivo);
+        System.out.println("Quieres saber la solucion?");
+        String respuesta = sc.nextLine();
+            //String respuesta = "yes"
+                    if(respuesta.equals("yes")){
+                        System.out.println("Respuesta" + objetivo);
+                    }else{
+                        System.out.println("sigue adivinando el numero");
+
+                    }
         trastada(ancho, alto, j);
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
